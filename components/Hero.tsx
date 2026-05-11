@@ -1,7 +1,19 @@
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white pt-32 pb-24 px-4">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white pt-32 pb-36 px-4">
+      {/* Dot grid overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+          backgroundSize: "40px 40px",
+        }}
+      />
+      {/* Decorative glow blobs */}
+      <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-green-500 rounded-full opacity-10 blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-4xl mx-auto text-center">
         <span className="inline-block bg-green-600 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
           Serving Central Texas
         </span>
@@ -44,6 +56,13 @@ export default function Hero() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Wave divider */}
+      <div className="absolute bottom-0 left-0 right-0 leading-none">
+        <svg viewBox="0 0 1440 56" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-14">
+          <path d="M0 56L60 46.7C120 37.3 240 18.7 360 14C480 9.3 600 18.7 720 23.3C840 28 960 28 1080 23.3C1200 18.7 1320 9.3 1380 4.7L1440 0V56H1380C1320 56 1200 56 1080 56C960 56 840 56 720 56C600 56 480 56 360 56C240 56 120 56 60 56H0Z" fill="#f8fafc"/>
+        </svg>
       </div>
     </section>
   );

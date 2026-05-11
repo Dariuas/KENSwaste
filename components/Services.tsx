@@ -56,23 +56,25 @@ type Service = {
 
 function ServiceCard({ icon, name, description, price, unit }: Service) {
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-6 flex flex-col gap-3 hover:shadow-md transition-shadow">
-      <div className="text-3xl">{icon}</div>
-      <div>
-        <h3 className="font-bold text-slate-800 text-lg">{name}</h3>
-        <p className="text-slate-500 text-sm mt-1">{description}</p>
+    <div className="bg-white rounded-xl border border-slate-200 p-5 flex gap-4 hover:shadow-md transition-shadow items-start">
+      <div className="flex-shrink-0 w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl border border-blue-100">
+        {icon}
       </div>
-      <div className="mt-auto pt-3 flex items-end justify-between border-t border-slate-100">
-        <div>
-          <span className="text-2xl font-bold text-blue-900">{price}</span>
-          <span className="text-slate-400 text-sm ml-1">{unit}</span>
+      <div className="flex-1 min-w-0">
+        <h3 className="font-bold text-slate-800">{name}</h3>
+        <p className="text-slate-500 text-sm mt-0.5">{description}</p>
+        <div className="mt-3 flex items-center justify-between">
+          <div>
+            <span className="text-xl font-bold text-blue-900">{price}</span>
+            <span className="text-slate-400 text-xs ml-1">{unit}</span>
+          </div>
+          <a
+            href="#booking"
+            className="bg-blue-900 hover:bg-blue-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
+          >
+            Book
+          </a>
         </div>
-        <a
-          href="#booking"
-          className="bg-blue-900 hover:bg-blue-800 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
-        >
-          Book
-        </a>
       </div>
     </div>
   );
@@ -94,9 +96,16 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h3 className="text-xl font-bold text-blue-900 mb-5 pb-2 border-b border-blue-100">
-              Event &amp; Private Rentals
-            </h3>
+            {/* Rental category banner */}
+            <div className="rounded-2xl bg-gradient-to-r from-blue-900 to-blue-700 p-6 mb-5 flex items-center gap-4 text-white">
+              <div className="text-5xl">🚽</div>
+              <div>
+                <h3 className="text-xl font-bold">Event &amp; Private Rentals</h3>
+                <p className="text-blue-200 text-sm mt-0.5">
+                  Portable toilets, tanks &amp; hand washing for any occasion
+                </p>
+              </div>
+            </div>
             <div className="flex flex-col gap-4">
               {rentals.map((s) => (
                 <ServiceCard key={s.name} {...s} />
@@ -105,9 +114,16 @@ export default function Services() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold text-blue-900 mb-5 pb-2 border-b border-blue-100">
-              Septic Care
-            </h3>
+            {/* Septic category banner */}
+            <div className="rounded-2xl bg-gradient-to-r from-green-800 to-green-600 p-6 mb-5 flex items-center gap-4 text-white">
+              <div className="text-5xl">🚛</div>
+              <div>
+                <h3 className="text-xl font-bold">Septic Care</h3>
+                <p className="text-green-100 text-sm mt-0.5">
+                  Professional pump-outs for septic tanks, holding tanks &amp; RVs
+                </p>
+              </div>
+            </div>
             <div className="flex flex-col gap-4">
               {septic.map((s) => (
                 <ServiceCard key={s.name} {...s} />

@@ -1,6 +1,8 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import StatsBanner from "@/components/StatsBanner";
 import Services from "@/components/Services";
+import HowItWorks from "@/components/HowItWorks";
 import ServiceArea from "@/components/ServiceArea";
 import Booking from "@/components/Booking";
 import QuoteForm from "@/components/QuoteForm";
@@ -13,7 +15,9 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <StatsBanner />
         <Services />
+        <HowItWorks />
         <ServiceArea />
         <Booking />
         <QuoteForm />
