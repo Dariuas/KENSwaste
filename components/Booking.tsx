@@ -1,6 +1,7 @@
 "use client";
 
 import { InlineWidget } from "react-calendly";
+import MockCalendar from "@/components/MockCalendar";
 
 const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || "";
 
@@ -26,20 +27,7 @@ export default function Booking() {
             />
           </div>
         ) : (
-          <div className="rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 p-16 text-center">
-            <p className="text-slate-500 text-lg font-medium mb-2">
-              Online booking coming soon!
-            </p>
-            <p className="text-slate-400 text-sm mb-6">
-              In the meantime, call or email us to schedule your service.
-            </p>
-            <a
-              href="#contact"
-              className="inline-block bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-            >
-              Contact Us to Book
-            </a>
-          </div>
+          <MockCalendar />
         )}
 
         <p className="text-center text-slate-400 text-sm mt-4">
