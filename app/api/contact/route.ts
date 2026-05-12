@@ -16,13 +16,13 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       // TODO: replace with your verified Resend domain address once set up
-      from: "KENS Waste Website <onboarding@resend.dev>",
+      from: "TX BM Rentals and Septic Pump Website <onboarding@resend.dev>",
       // TODO: replace with your actual business email
       to: ["info@kenswaste.com"],
       replyTo: email,
       subject: `Quote Request from ${name} — ${service}`,
       text: `
-New quote request from the KENS Waste website:
+New quote request from the TX BM Rentals and Septic Pump website:
 
 Name:     ${name}
 Phone:    ${phone}

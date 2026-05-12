@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "KENS Waste | Portable Toilet & Septic Services | Central Texas",
+  title: "TX BM Rentals and Septic Pump | Portable Toilet & Septic Services | Central Texas",
   description:
     "Reliable porta potty rentals, holding tank rentals, hand washing stations, and septic pump-out services in Buda, Kyle, San Marcos, and the greater Austin area.",
   keywords:
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "https://kenswaste.com"
   ),
   openGraph: {
-    title: "KENS Waste | Portable Toilet & Septic Services",
+    title: "TX BM Rentals and Septic Pump | Portable Toilet & Septic Services",
     description:
       "Reliable porta potty and septic services across Central Texas. Book online today.",
     type: "website",

@@ -29,7 +29,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-          From weddings to construction sites — KENS Waste has the equipment
+          From weddings to construction sites — TX BM Rentals and Septic Pump has the equipment
           and expertise to keep your sanitation needs covered. Proudly serving
           Buda, Kyle, San Marcos, and the greater Austin area.
         </p>

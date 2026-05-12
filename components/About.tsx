@@ -24,7 +24,7 @@ export default function About() {
               Reliable Sanitation Services for Any Event or Job Site
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              At KENS Waste, we offer reliable porta-potty rentals, septic pumping, and
+              At TX BM Rentals and Septic Pump, we offer reliable porta-potty rentals, septic pumping, and
               septic tank services for any event or job site. From weddings to construction
               sites, we have the equipment and expertise to ensure your sanitation needs
               are met.
@@ -45,7 +45,7 @@ export default function About() {
               <div>
                 <h3 className="font-bold text-slate-800 mb-1">7+ Years Serving Central Texas</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">
-                  KENS Waste has supplied the best customer service in the Kyle, Buda, and
+                  TX BM Rentals and Septic Pump has supplied the best customer service in the Kyle, Buda, and
                   surrounding areas for over seven years. We continue to provide a service
                   our customers can depend on.
                 </p>
