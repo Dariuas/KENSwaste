@@ -1,17 +1,22 @@
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white pt-32 pb-36 px-4">
+      {/* Background photo — drop a file at public/images/hero.jpg to enable */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/hero.jpg')" }}
+      />
+      {/* Dark overlay keeps text readable over the photo */}
+      <div className="absolute inset-0 bg-blue-950/75" />
+
       {/* Dot grid overlay */}
       <div
-        className="absolute inset-0 opacity-[0.07]"
+        className="absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
           backgroundSize: "40px 40px",
         }}
       />
-      {/* Decorative glow blobs */}
-      <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-green-500 rounded-full opacity-10 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-4xl mx-auto text-center">
         <span className="inline-block bg-green-600 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-6">

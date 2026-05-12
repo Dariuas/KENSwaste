@@ -96,10 +96,14 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            {/* Rental category banner */}
-            <div className="rounded-2xl bg-gradient-to-r from-blue-900 to-blue-700 p-6 mb-5 flex items-center gap-4 text-white">
-              <div className="text-5xl">🚽</div>
-              <div>
+            {/* Rental category banner — drop public/images/rentals.jpg to add a photo */}
+            <div
+              className="rounded-2xl overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700 p-6 mb-5 flex items-center gap-4 text-white relative"
+              style={{ backgroundImage: "url('/images/rentals.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+            >
+              <div className="absolute inset-0 bg-blue-900/80 rounded-2xl" />
+              <div className="text-5xl relative z-10">🚽</div>
+              <div className="relative z-10">
                 <h3 className="text-xl font-bold">Event &amp; Private Rentals</h3>
                 <p className="text-blue-200 text-sm mt-0.5">
                   Portable toilets, tanks &amp; hand washing for any occasion
@@ -114,10 +118,14 @@ export default function Services() {
           </div>
 
           <div>
-            {/* Septic category banner */}
-            <div className="rounded-2xl bg-gradient-to-r from-green-800 to-green-600 p-6 mb-5 flex items-center gap-4 text-white">
-              <div className="text-5xl">🚛</div>
-              <div>
+            {/* Septic category banner — drop public/images/septic.jpg to add a photo */}
+            <div
+              className="rounded-2xl overflow-hidden bg-gradient-to-r from-green-800 to-green-600 p-6 mb-5 flex items-center gap-4 text-white relative"
+              style={{ backgroundImage: "url('/images/septic.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+            >
+              <div className="absolute inset-0 bg-green-900/80 rounded-2xl" />
+              <div className="text-5xl relative z-10">🚛</div>
+              <div className="relative z-10">
                 <h3 className="text-xl font-bold">Septic Care</h3>
                 <p className="text-green-100 text-sm mt-0.5">
                   Professional pump-outs for septic tanks, holding tanks &amp; RVs
