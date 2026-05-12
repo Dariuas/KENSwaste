@@ -29,9 +29,9 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-          From porta potty rentals to full septic pump-outs — we keep your
-          site, event, or home running smoothly. Proudly serving Buda, Kyle,
-          San Marcos, and the greater Austin area.
+          From weddings to construction sites — KENS Waste has the equipment
+          and expertise to keep your sanitation needs covered. Proudly serving
+          Buda, Kyle, San Marcos, and the greater Austin area.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
