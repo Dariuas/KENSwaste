@@ -1,13 +1,13 @@
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white pt-32 pb-36 px-4">
-      {/* Background photo — drop a file at public/images/hero.jpg to enable */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white pt-32 pb-36 px-4">
+      {/* Background photo */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero.jpg')" }}
+        style={{ backgroundImage: "url('/images/hero.jpeg')" }}
       />
       {/* Dark overlay keeps text readable over the photo */}
-      <div className="absolute inset-0 bg-blue-950/75" />
+      <div className="absolute inset-0 bg-slate-900/75" />
 
       {/* Dot grid overlay */}
       <div
@@ -19,37 +19,37 @@ export default function Hero() {
       />
 
       <div className="relative max-w-4xl mx-auto text-center">
-        <span className="inline-block bg-green-600 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
+        <span className="inline-block bg-chartreuse-600 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
           Serving Central Texas
         </span>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
           Reliable Portable Toilet &amp;{" "}
-          <span className="text-green-400">Septic Services</span>
+          <span className="text-chartreuse-400">Septic Services</span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl text-slate-200 mb-10 max-w-2xl mx-auto">
           From weddings to construction sites — TX BM Rentals and Septic Pump has the equipment
           and expertise to keep your sanitation needs covered. Proudly serving
-          Buda, Kyle, San Marcos, and the greater Austin area.
+          Buda, Kyle, San Marcos, and surrounding Central Texas.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#booking"
-            className="bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
+            className="bg-chartreuse-600 hover:bg-chartreuse-500 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
           >
             Book a Service
           </a>
           <a
             href="#quote"
-            className="border-2 border-white hover:bg-white hover:text-blue-900 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
+            className="border-2 border-white hover:bg-white hover:text-slate-900 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
           >
             Request a Quote
           </a>
         </div>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-8 text-blue-200 text-sm">
+        <div className="mt-12 flex flex-wrap justify-center gap-8 text-slate-300 text-sm">
           {[
             "Licensed & Insured",
             "Fast Response",
@@ -57,7 +57,7 @@ export default function Hero() {
             "Central Texas Based",
           ].map((badge) => (
             <div key={badge} className="flex items-center gap-2">
-              <span className="text-green-400">&#10003;</span> {badge}
+              <span className="text-chartreuse-400">&#10003;</span> {badge}
             </div>
           ))}
         </div>

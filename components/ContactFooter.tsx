@@ -21,12 +21,11 @@ export default function ContactFooter() {
             <h3 className="font-bold text-lg mb-3">Contact</h3>
             <ul className="text-slate-400 text-sm space-y-2">
               <li>
-                {/* TODO: replace with actual phone number */}
                 <a
-                  href="tel:+15550000000"
+                  href="tel:+15124129489"
                   className="hover:text-white transition-colors"
                 >
-                  📞 (555) 000-0000
+                  📞 (512) 412-9489
                 </a>
               </li>
               <li>

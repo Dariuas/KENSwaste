@@ -3,7 +3,7 @@ const rentals = [
     icon: "🚽",
     name: "Portable Toilet",
     description: "One portable toilet rental for a 48-hour period.",
-    price: "$130",
+    price: "$150",
     unit: "/ 48 hrs",
   },
   {
@@ -57,7 +57,7 @@ type Service = {
 function ServiceCard({ icon, name, description, price, unit }: Service) {
   return (
     <div className="bg-white rounded-xl border border-slate-200 p-5 flex gap-4 hover:shadow-md transition-shadow items-start">
-      <div className="flex-shrink-0 w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl border border-blue-100">
+      <div className="flex-shrink-0 w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-2xl border border-slate-200">
         {icon}
       </div>
       <div className="flex-1 min-w-0">
@@ -65,12 +65,12 @@ function ServiceCard({ icon, name, description, price, unit }: Service) {
         <p className="text-slate-500 text-sm mt-0.5">{description}</p>
         <div className="mt-3 flex items-center justify-between">
           <div>
-            <span className="text-xl font-bold text-blue-900">{price}</span>
+            <span className="text-xl font-bold text-slate-800">{price}</span>
             <span className="text-slate-400 text-xs ml-1">{unit}</span>
           </div>
           <a
             href="#booking"
-            className="bg-blue-900 hover:bg-blue-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
+            className="bg-chartreuse-600 hover:bg-chartreuse-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
           >
             Book
           </a>
@@ -96,16 +96,15 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            {/* Rental category banner — drop public/images/rentals.jpg to add a photo */}
             <div
-              className="rounded-2xl overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700 p-6 mb-5 flex items-center gap-4 text-white relative"
-              style={{ backgroundImage: "url('/images/rentals.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+              className="rounded-2xl overflow-hidden bg-gradient-to-r from-slate-800 to-slate-600 p-6 mb-5 flex items-center gap-4 text-white relative"
+              style={{ backgroundImage: "url('/images/KIMG0544.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}
             >
-              <div className="absolute inset-0 bg-blue-900/80 rounded-2xl" />
+              <div className="absolute inset-0 bg-slate-900/80 rounded-2xl" />
               <div className="text-5xl relative z-10">🚽</div>
               <div className="relative z-10">
                 <h3 className="text-xl font-bold">Event &amp; Private Rentals</h3>
-                <p className="text-blue-200 text-sm mt-0.5">
+                <p className="text-slate-200 text-sm mt-0.5">
                   Portable toilets, tanks &amp; hand washing for any occasion
                 </p>
               </div>
@@ -118,16 +117,15 @@ export default function Services() {
           </div>
 
           <div>
-            {/* Septic category banner — drop public/images/septic.jpg to add a photo */}
             <div
-              className="rounded-2xl overflow-hidden bg-gradient-to-r from-green-800 to-green-600 p-6 mb-5 flex items-center gap-4 text-white relative"
-              style={{ backgroundImage: "url('/images/septic.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+              className="rounded-2xl overflow-hidden bg-gradient-to-r from-slate-800 to-slate-600 p-6 mb-5 flex items-center gap-4 text-white relative"
+              style={{ backgroundImage: "url('/images/IMG_0732.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}
             >
-              <div className="absolute inset-0 bg-green-900/80 rounded-2xl" />
+              <div className="absolute inset-0 bg-slate-900/80 rounded-2xl" />
               <div className="text-5xl relative z-10">🚛</div>
               <div className="relative z-10">
                 <h3 className="text-xl font-bold">Septic Care</h3>
-                <p className="text-green-100 text-sm mt-0.5">
+                <p className="text-slate-200 text-sm mt-0.5">
                   Professional pump-outs for septic tanks, holding tanks &amp; RVs
                 </p>
               </div>

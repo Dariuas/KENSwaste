@@ -34,17 +34,17 @@ export default function HowItWorks() {
 
         <div className="grid sm:grid-cols-3 gap-8 relative">
           {/* Connector line (desktop only) */}
-          <div className="hidden sm:block absolute top-10 left-[20%] right-[20%] h-0.5 bg-blue-100" />
+          <div className="hidden sm:block absolute top-10 left-[20%] right-[20%] h-0.5 bg-slate-200" />
 
           {steps.map((step) => (
             <div key={step.num} className="flex flex-col items-center text-center relative">
               {/* Icon circle */}
-              <div className="w-20 h-20 rounded-full bg-blue-50 border-2 border-blue-100 flex items-center justify-center text-3xl mb-4 relative z-10 bg-white">
+              <div className="w-20 h-20 rounded-full bg-slate-50 border-2 border-slate-200 flex items-center justify-center text-3xl mb-4 relative z-10 bg-white">
                 {step.icon}
               </div>
 
               {/* Step number */}
-              <span className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-1">
+              <span className="text-xs font-bold text-chartreuse-600 uppercase tracking-widest mb-1">
                 Step {step.num}
               </span>
 
@@ -62,7 +62,7 @@ export default function HowItWorks() {
         <div className="text-center mt-12">
           <a
             href="#booking"
-            className="inline-block bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
+            className="inline-block bg-chartreuse-600 hover:bg-chartreuse-500 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
           >
             Book a Service Today
           </a>

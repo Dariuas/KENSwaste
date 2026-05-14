@@ -22,7 +22,7 @@ export default function Nav() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-blue-950 shadow-lg" : "bg-blue-950/95"
+        scrolled ? "bg-slate-900 shadow-lg" : "bg-slate-900/95"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,14 +37,14 @@ export default function Nav() {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-blue-200 hover:text-white text-sm font-medium transition-colors"
+                className="text-slate-300 hover:text-white text-sm font-medium transition-colors"
               >
                 {l.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-md text-sm font-semibold transition-colors"
+              className="bg-chartreuse-600 hover:bg-chartreuse-500 text-white px-4 py-2 rounded-md text-sm font-semibold transition-colors"
             >
               Contact Us
             </a>
@@ -83,13 +83,13 @@ export default function Nav() {
 
         {/* Mobile menu */}
         {open && (
-          <div className="md:hidden border-t border-blue-800 pb-4 pt-2">
+          <div className="md:hidden border-t border-slate-700 pb-4 pt-2">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block text-blue-200 hover:text-white py-2 text-sm font-medium"
+                className="block text-slate-300 hover:text-white py-2 text-sm font-medium"
               >
                 {l.label}
               </a>

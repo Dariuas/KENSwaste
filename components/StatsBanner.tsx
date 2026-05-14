@@ -11,7 +11,7 @@ export default function StatsBanner() {
       <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
         {stats.map((s) => (
           <div key={s.label}>
-            <div className="text-3xl font-bold text-blue-900">{s.value}</div>
+            <div className="text-3xl font-bold text-slate-800">{s.value}</div>
             <div className="text-slate-500 text-sm mt-1">{s.label}</div>
           </div>
         ))}

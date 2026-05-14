@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const SERVICE_OPTIONS = [
-  "Portable Toilet Rental (48 hr — $130)",
+  "Portable Toilet Rental (48 hr — $150)",
   "Holding Tank Rental (monthly — $275)",
   "Hand Washing Station (48 hr — $120)",
   "Septic Pump Out (up to 1,500 gal — $400)",
@@ -69,12 +69,12 @@ export default function QuoteForm() {
         </div>
 
         {status === "success" ? (
-          <div className="bg-green-50 border border-green-200 rounded-xl p-10 text-center">
+          <div className="bg-chartreuse-50 border border-chartreuse-200 rounded-xl p-10 text-center">
             <div className="text-5xl mb-4">&#10003;</div>
-            <h3 className="text-xl font-bold text-green-800">
+            <h3 className="text-xl font-bold text-chartreuse-800">
               Request Received!
             </h3>
-            <p className="text-green-700 mt-2">
+            <p className="text-chartreuse-700 mt-2">
               We&apos;ll be in touch within 24 hours.
             </p>
           </div>
@@ -93,7 +93,7 @@ export default function QuoteForm() {
                   required
                   type="text"
                   placeholder="John Smith"
-                  className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-chartreuse-500"
                 />
               </label>
 
@@ -106,7 +106,7 @@ export default function QuoteForm() {
                   required
                   type="tel"
                   placeholder="(512) 000-0000"
-                  className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-chartreuse-500"
                 />
               </label>
             </div>
@@ -120,7 +120,7 @@ export default function QuoteForm() {
                 required
                 type="email"
                 placeholder="you@example.com"
-                className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-chartreuse-500"
               />
             </label>
 
@@ -132,7 +132,7 @@ export default function QuoteForm() {
                 name="service"
                 required
                 defaultValue=""
-                className="border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-chartreuse-500"
               >
                 <option value="" disabled>
                   Select a service...
@@ -152,7 +152,7 @@ export default function QuoteForm() {
               <input
                 name="date"
                 type="date"
-                className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-chartreuse-500"
               />
             </label>
 
@@ -164,7 +164,7 @@ export default function QuoteForm() {
                 name="message"
                 rows={4}
                 placeholder="Event size, location, any special requirements..."
-                className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"
+                className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-chartreuse-500 resize-y"
               />
             </label>
 
@@ -175,7 +175,7 @@ export default function QuoteForm() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="bg-green-600 hover:bg-green-500 disabled:opacity-60 text-white font-semibold py-3 rounded-lg transition-colors"
+              className="bg-chartreuse-600 hover:bg-chartreuse-500 disabled:opacity-60 text-white font-semibold py-3 rounded-lg transition-colors"
             >
               {status === "loading" ? "Sending..." : "Send Request"}
             </button>

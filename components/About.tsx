@@ -4,15 +4,15 @@ export default function About() {
       <div className="max-w-5xl mx-auto">
 
         {/* Tagline callout */}
-        <div className="bg-blue-950 text-white rounded-2xl px-8 py-10 text-center mb-14">
+        <div className="bg-slate-900 text-white rounded-2xl px-8 py-10 text-center mb-14">
           <p className="text-2xl sm:text-3xl font-bold leading-snug">
             We strive to be{" "}
-            <span className="text-green-400">number one</span>{" "}
+            <span className="text-chartreuse-400">number one</span>{" "}
             in the{" "}
-            <span className="text-green-400">number two</span>{" "}
+            <span className="text-chartreuse-400">number two</span>{" "}
             business.
           </p>
-          <p className="text-blue-300 mt-3 text-sm">
+          <p className="text-slate-400 mt-3 text-sm">
             Locally owned &amp; family operated — Kyle, Buda, and beyond
           </p>
         </div>
@@ -31,15 +31,24 @@ export default function About() {
             </p>
             <a
               href="#quote"
-              className="inline-block bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              className="inline-block bg-chartreuse-600 hover:bg-chartreuse-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
             >
               Get a Fast, Friendly Quote
             </a>
           </div>
 
           <div className="flex flex-col gap-6">
+            {/* Brand logo photo */}
+            <div className="rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
+              <img
+                src="/images/KIMG0545.jpeg"
+                alt="Texas BM Rentals logo"
+                className="w-full object-cover max-h-52"
+              />
+            </div>
+
             <div className="flex gap-4 items-start">
-              <div className="flex-shrink-0 w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-xl border border-blue-100">
+              <div className="flex-shrink-0 w-11 h-11 bg-slate-50 rounded-xl flex items-center justify-center text-xl border border-slate-200">
                 🏆
               </div>
               <div>
@@ -53,7 +62,7 @@ export default function About() {
             </div>
 
             <div className="flex gap-4 items-start">
-              <div className="flex-shrink-0 w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-xl border border-blue-100">
+              <div className="flex-shrink-0 w-11 h-11 bg-slate-50 rounded-xl flex items-center justify-center text-xl border border-slate-200">
                 🤝
               </div>
               <div>
@@ -66,7 +75,7 @@ export default function About() {
             </div>
 
             <div className="flex gap-4 items-start">
-              <div className="flex-shrink-0 w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-xl border border-blue-100">
+              <div className="flex-shrink-0 w-11 h-11 bg-slate-50 rounded-xl flex items-center justify-center text-xl border border-slate-200">
                 📋
               </div>
               <div>
