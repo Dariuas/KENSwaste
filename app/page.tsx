@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import StatsBanner from "@/components/StatsBanner";
 import About from "@/components/About";
+import PhotoGallery from "@/components/PhotoGallery";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import ServiceArea from "@/components/ServiceArea";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <StatsBanner />
         <About />
+        <PhotoGallery />
         <Services />
         <HowItWorks />
         <ServiceArea />
