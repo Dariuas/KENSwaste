@@ -1,10 +1,5 @@
 "use client";
 
-import { InlineWidget } from "react-calendly";
-import MockCalendar from "@/components/MockCalendar";
-
-const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || "";
-
 export default function Booking() {
   return (
     <section id="booking" className="bg-white py-20 px-4">
@@ -13,22 +8,19 @@ export default function Booking() {
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-800">
             Schedule a Service
           </h2>
-          <p className="text-slate-500 mt-3 max-w-xl mx-auto">
+          <p className="text-slate-500 mt-3 max-xl mx-auto">
             Pick a date and time below. We&apos;ll confirm your appointment
             within 24 hours.
           </p>
         </div>
 
-        {CALENDLY_URL ? (
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-            <InlineWidget
-              url={CALENDLY_URL}
-              styles={{ height: "700px", minWidth: "320px" }}
-            />
-          </div>
-        ) : (
-          <MockCalendar />
-        )}
+        <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+          <iframe
+            src="https://calendar.app.google/ZsG9zRmvi5xHmt6GA"
+            style={{ width: "100%", height: "700px", border: "none" }}
+            title="Schedule a Service"
+          />
+        </div>
 
         <p className="text-center text-slate-400 text-sm mt-4">
           Prefer to talk?{" "}

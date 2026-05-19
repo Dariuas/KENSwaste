@@ -29,12 +29,11 @@ export default function ContactFooter() {
                 </a>
               </li>
               <li>
-                {/* TODO: replace with actual email address */}
                 <a
-                  href="mailto:info@kenswaste.com"
+                  href="mailto:sales@txbmservice.com"
                   className="hover:text-white transition-colors"
                 >
-                  ✉️ info@kenswaste.com
+                  ✉️ sales@txbmservice.com
                 </a>
               </li>
               <li>📍 Serving Central Texas</li>

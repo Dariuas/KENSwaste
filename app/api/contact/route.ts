@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
 
 export async function POST(req: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY || "");
-
   try {
     const { name, phone, email, service, date, message } = await req.json();
 
@@ -14,26 +11,28 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    await resend.emails.send({
-      // TODO: replace with your verified Resend domain address once set up
-      from: "TX BM Rentals and Septic Pump Website <onboarding@resend.dev>",
-      // TODO: replace with your actual business email
-      to: ["info@kenswaste.com"],
-      replyTo: email,
-      subject: `Quote Request from ${name} — ${service}`,
-      text: `
-New quote request from the TX BM Rentals and Septic Pump website:
-
-Name:     ${name}
-Phone:    ${phone}
-Email:    ${email}
-Service:  ${service}
-Date:     ${date || "Not specified"}
-
-Message:
-${message || "No additional details provided."}
-      `.trim(),
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: process.env.WEB3FORMS_ACCESS_KEY,
+        subject: `Quote Request from ${name} — ${service}`,
+        from_name: name,
+        replyto: email,
+        name,
+        phone,
+        email,
+        service,
+        date: date || "Not specified",
+        message: message || "No additional details provided.",
+      }),
     });
+
+    const data = await res.json();
+
+    if (!data.success) {
+      throw new Error(data.message || "Web3Forms submission failed");
+    }
 
     return NextResponse.json({ success: true });
   } catch (err) {
