@@ -1,28 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
+import Cal from "@calcom/embed-react";
 
 export default function Booking() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.cal.com/embed/embed.js";
-    script.async = true;
-    script.onload = () => {
-      // @ts-expect-error Cal is loaded via script
-      window.Cal("init", { origin: "https://cal.com" });
-      // @ts-expect-error Cal is loaded via script
-      window.Cal("inline", {
-        elementOrSelector: "#cal-booking",
-        calLink: "txbmservice",
-        config: { layout: "month_view" },
-      });
-    };
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <section id="booking" className="bg-white py-20 px-4">
       <div className="max-w-5xl mx-auto">
@@ -35,11 +15,13 @@ export default function Booking() {
           </p>
         </div>
 
-        <div
-          id="cal-booking"
-          className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm"
-          style={{ height: "700px" }}
-        />
+        <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+          <Cal
+            calLink="txbmservice"
+            style={{ width: "100%", height: "700px" }}
+            config={{ layout: "month_view" }}
+          />
+        </div>
 
         <p className="text-center text-slate-400 text-sm mt-4">
           Prefer to talk?{" "}
