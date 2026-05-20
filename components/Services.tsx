@@ -1,7 +1,11 @@
 "use client";
 
 import { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
+
+async function openBooking() {
+  const cal = await getCalApi();
+  cal("modal", { calLink: "txbmservice" });
+}
 
 const rentals = [
   {
@@ -60,13 +64,6 @@ type Service = {
 };
 
 function ServiceCard({ icon, name, description, price, unit }: Service) {
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi();
-      cal("ui", { hideEventTypeDetails: false });
-    })();
-  }, []);
-
   return (
     <div className="bg-white rounded-xl border border-slate-200 p-5 flex gap-4 hover:shadow-md transition-shadow items-start">
       <div className="flex-shrink-0 w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-2xl border border-slate-200">
@@ -81,7 +78,7 @@ function ServiceCard({ icon, name, description, price, unit }: Service) {
             <span className="text-slate-400 text-xs ml-1">{unit}</span>
           </div>
           <button
-            data-cal-link="txbmservice"
+            onClick={openBooking}
             className="bg-chartreuse-600 hover:bg-chartreuse-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
           >
             Book
