@@ -1,12 +1,3 @@
-"use client";
-
-import { getCalApi } from "@calcom/embed-react";
-
-async function openBooking() {
-  const cal = await getCalApi();
-  cal("modal", { calLink: "txbmservice" });
-}
-
 const rentals = [
   {
     icon: "🚽",
@@ -77,12 +68,12 @@ function ServiceCard({ icon, name, description, price, unit }: Service) {
             <span className="text-xl font-bold text-slate-800">{price}</span>
             <span className="text-slate-400 text-xs ml-1">{unit}</span>
           </div>
-          <button
-            onClick={openBooking}
-            className="bg-chartreuse-600 hover:bg-chartreuse-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
+          <a
+            href="#booking"
+            className="bg-chartreuse-600 hover:bg-chartreuse-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
           >
             Book
-          </button>
+          </a>
         </div>
       </div>
     </div>
