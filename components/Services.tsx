@@ -1,3 +1,25 @@
+const luxuryRates = [
+  { label: "Monday – Thursday", price: "$895" },
+  { label: "Friday", price: "$995" },
+  { label: "Saturday", price: "$1,295" },
+  { label: "Sunday", price: "$995" },
+  { label: "Weekend (Fri – Sun)", price: "$1,895" },
+  { label: "Weekend (Sat – Sun)", price: "$1,595" },
+  { label: "Weekly", price: "$3,995" },
+  { label: "Monthly", price: "From $5,995" },
+];
+
+const luxuryAddOns = [
+  { label: "Additional mileage (beyond 30 mi)", price: "$4.00/mile" },
+  { label: "Generator rental", price: "$175/day" },
+  { label: "Freshwater refill", price: "$125" },
+  { label: "Additional waste pumping", price: "$175" },
+  { label: "Attendant", price: "$40/hr (4-hr min)" },
+  { label: "Emergency after-hours", price: "$250" },
+  { label: "Holiday surcharge", price: "$150" },
+  { label: "Optional damage waiver", price: "$50" },
+];
+
 const rentals = [
   {
     icon: "🚽",
@@ -94,11 +116,112 @@ export default function Services() {
           </p>
         </div>
 
+        {/* Luxury Restroom Trailer — full-width featured section */}
+        <div className="mb-14 rounded-3xl overflow-hidden border border-slate-200 shadow-sm bg-white">
+          <div className="grid md:grid-cols-2">
+            {/* Left: image */}
+            <div className="relative h-64 md:h-auto overflow-hidden">
+              <img
+                src="/images/luxury-interior.jpg"
+                alt="Luxury restroom trailer interior"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-slate-900/40" />
+              <div className="absolute inset-0 flex flex-col justify-end p-6">
+                <span className="inline-block bg-chartreuse-600 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-2">
+                  Premium Service
+                </span>
+                <h3 className="text-2xl font-bold text-white leading-tight">
+                  Luxury Restroom Trailer
+                </h3>
+                <p className="text-slate-200 text-sm mt-1">
+                  Elegant. Clean. Comfortable. — Climate-controlled, flushing toilets &amp; premium finishes.
+                </p>
+              </div>
+            </div>
+
+            {/* Right: pricing */}
+            <div className="p-6 md:p-8">
+              {/* What's included */}
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">
+                Every rental includes
+              </p>
+              <ul className="text-slate-600 text-sm grid grid-cols-2 gap-x-4 gap-y-1 mb-6">
+                {[
+                  "Delivery within 30 miles",
+                  "Professional setup & pickup",
+                  "Toilet paper, paper towels & soap",
+                  "Freshwater fill",
+                  "Waste disposal",
+                  "Complete sanitizing",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-1.5">
+                    <span className="text-chartreuse-600 mt-0.5">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Rate table */}
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">
+                2026 Rental Rates
+              </p>
+              <div className="rounded-xl overflow-hidden border border-slate-200 mb-4">
+                {luxuryRates.map((row, i) => (
+                  <div
+                    key={row.label}
+                    className={`flex items-center justify-between px-4 py-2.5 text-sm ${
+                      i % 2 === 0 ? "bg-white" : "bg-slate-50"
+                    }`}
+                  >
+                    <span className="text-slate-700">{row.label}</span>
+                    <span className="font-bold text-slate-900">{row.price}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Add-ons */}
+              <details className="group">
+                <summary className="cursor-pointer text-xs font-semibold uppercase tracking-widest text-slate-400 list-none flex items-center gap-1 mb-2">
+                  <span>Add-ons &amp; Extras</span>
+                  <span className="group-open:rotate-180 transition-transform">▾</span>
+                </summary>
+                <div className="rounded-xl overflow-hidden border border-slate-200 mb-4">
+                  {luxuryAddOns.map((row, i) => (
+                    <div
+                      key={row.label}
+                      className={`flex items-center justify-between px-4 py-2 text-xs ${
+                        i % 2 === 0 ? "bg-white" : "bg-slate-50"
+                      }`}
+                    >
+                      <span className="text-slate-600">{row.label}</span>
+                      <span className="font-semibold text-slate-800">{row.price}</span>
+                    </div>
+                  ))}
+                </div>
+              </details>
+
+              <p className="text-xs text-slate-400 mb-4">
+                25% non-refundable deposit to reserve. Balance due 7 days before delivery.
+                Business accounts may qualify for Net 30 terms.
+              </p>
+
+              <a
+                href="#booking"
+                className="block text-center bg-chartreuse-600 hover:bg-chartreuse-500 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+              >
+                Book the Luxury Trailer
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Portable Rentals & Septic */}
         <div className="grid md:grid-cols-2 gap-10">
           <div>
             <div
               className="rounded-2xl overflow-hidden bg-gradient-to-r from-slate-800 to-slate-600 p-6 mb-5 flex items-center gap-4 text-white relative"
-              style={{ backgroundImage: "url('/images/KIMG0544.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}
+              style={{ backgroundImage: "url('/images/luxury-exterior.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
             >
               <div className="absolute inset-0 bg-slate-900/80 rounded-2xl" />
               <div className="text-5xl relative z-10">🚽</div>

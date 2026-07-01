@@ -4,7 +4,7 @@ export default function Hero() {
       {/* Background photo */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero.jpeg')" }}
+        style={{ backgroundImage: "url('/images/luxury-collage.jpg')" }}
       />
       {/* Dark overlay keeps text readable over the photo */}
       <div className="absolute inset-0 bg-slate-900/75" />
